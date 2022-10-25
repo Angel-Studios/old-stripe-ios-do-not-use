@@ -9,6 +9,7 @@
 import UIKit
 
 /// This view controller contains a credit card entry form that the user can fill out. On submission, it will use the Stripe API to convert the user's card details to a Stripe token. It renders a right bar button item that submits the form, so it must be shown inside a `UINavigationController`.
+@available(iOS 13, *)
 public class STPAddCardViewController: STPCoreTableViewController, STPAddressViewModelDelegate,
   STPCardScannerDelegate, STPPaymentCardTextFieldDelegate, UITableViewDelegate,
   UITableViewDataSource
@@ -775,6 +776,7 @@ public class STPAddCardViewController: STPCoreTableViewController, STPAddressVie
 /// An `STPAddCardViewControllerDelegate` is notified when an `STPAddCardViewController`
 /// successfully creates a card token or is cancelled. It has internal error-handling
 /// logic, so there's no error case to deal with.
+@available(iOS 13, *)
 @objc public protocol STPAddCardViewControllerDelegate: NSObjectProtocol {
   /// Called when the user cancels adding a card. You should dismiss (or pop) the
   /// view controller at this point.
