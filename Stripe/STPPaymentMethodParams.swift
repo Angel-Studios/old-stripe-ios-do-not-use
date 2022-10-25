@@ -596,6 +596,7 @@ public class STPPaymentMethodParams: NSObject, STPFormEncodable, STPPaymentOptio
 
 // MARK: - Legacy ObjC
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension 13, *)
 @objc
 extension STPPaymentMethodParams {

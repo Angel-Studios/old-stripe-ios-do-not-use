@@ -23,6 +23,7 @@ typealias STPShippingAddressSelectionBlock = (
   STPAddress, @escaping STPShippingAddressValidationBlock
 ) -> Void
 typealias STPPaymentAuthorizationBlock = (PKPayment) -> Void
+@available(iOS 13, *)
 extension PKPaymentAuthorizationViewController {
   class func stp_controller(
     with paymentRequest: PKPaymentRequest,
@@ -58,6 +59,7 @@ typealias STPApplePayShippingMethodCompletionBlock = (
 typealias STPApplePayShippingAddressCompletionBlock = (
   PKPaymentAuthorizationStatus, [PKShippingMethod]?, [PKPaymentSummaryItem]?
 ) -> Void
+@available(iOS 13, *)
 class STPBlockBasedApplePayDelegate: NSObject, PKPaymentAuthorizationViewControllerDelegate {
   var apiClient: STPAPIClient?
   var onShippingAddressSelection: STPShippingAddressSelectionBlock?

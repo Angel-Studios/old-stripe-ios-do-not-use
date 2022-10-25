@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 class STPSourcePoller: NSObject {

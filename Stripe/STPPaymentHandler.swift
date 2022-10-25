@@ -81,6 +81,7 @@ public typealias STPPaymentHandlerActionSetupIntentCompletionBlock = (
 /// `STPPaymentHandler` is a utility class that confirms PaymentIntents/SetupIntents and handles any authentication required, such as 3DS1/3DS2 for Strong Customer Authentication.
 /// It can present authentication UI on top of your app or redirect users out of your app (to e.g. their banking app).
 /// - seealso: https://stripe.com/docs/mobile/ios/authentication
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURLCallbackListener
@@ -1415,6 +1416,7 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
   }
 }
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 private extension STPPaymentHandler {

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 13, *)
 final class STPTelemetryClient: NSObject {
   @objc(sharedInstance) static var shared: STPTelemetryClient = STPTelemetryClient(sessionConfiguration: STPAPIClient.sharedUrlSessionConfiguration)
 

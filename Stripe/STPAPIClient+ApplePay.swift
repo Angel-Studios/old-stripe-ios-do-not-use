@@ -9,6 +9,7 @@ import Foundation
 import PassKit
 
 /// STPAPIClient extensions to create Stripe Tokens, Sources, or PaymentMethods from Apple Pay PKPayment objects.
+@available(iOS 13, *)
 extension STPAPIClient {
   /// Converts a PKPayment object into a Stripe token using the Stripe API.
   /// - Parameters:

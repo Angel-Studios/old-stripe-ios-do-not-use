@@ -12,6 +12,7 @@ import Foundation
 import Stripe3DS2
 #endif
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 internal protocol STPPaymentHandlerActionParams: AnyObject {
@@ -26,6 +27,7 @@ internal protocol STPPaymentHandlerActionParams: AnyObject {
   func complete(with status: STPPaymentHandlerActionStatus, error: NSError?)
 }
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 internal class STPPaymentHandlerPaymentIntentActionParams: NSObject, STPPaymentHandlerActionParams {
@@ -97,6 +99,7 @@ internal class STPPaymentHandlerPaymentIntentActionParams: NSObject, STPPaymentH
   }
 }
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 internal class STPPaymentHandlerSetupIntentActionParams: NSObject, STPPaymentHandlerActionParams {

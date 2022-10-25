@@ -11,6 +11,7 @@ import UIKit
 
 /// STPAUBECSDebitFormViewDelegate provides methods for STPAUBECSDebitFormView to inform its delegate
 /// of when the form has been completed.
+@available(iOS 13, *)
 @available(iOSApplicationExtension 13, *)
 @objc public protocol STPAUBECSDebitFormViewDelegate: NSObjectProtocol {
   /// Called when the form transitions from complete to incomplete or vice-versa.
@@ -22,6 +23,7 @@ import UIKit
 
 /// STPAUBECSDebitFormView is a subclass of UIControl that contains all of the necessary fields and legal text for collecting AU BECS Debit payments.
 /// For additional customization options - seealso: STPFormTextFieldContainer
+@available(iOS 13, *)
 @available(iOSApplicationExtension 13, *)
 public class STPAUBECSDebitFormView: STPMultiFormTextField, STPMultiFormFieldDelegate,
   UITextViewDelegate
@@ -492,6 +494,7 @@ public class STPAUBECSDebitFormView: STPMultiFormTextField, STPMultiFormFieldDel
   }
 }
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension 13, *)
 extension STPAUBECSDebitFormView {
   func nameTextField() -> STPFormTextField {

@@ -19,6 +19,7 @@ let JSONKeyObject = "object"
 /// 1) Use Codable
 /// 2) Define every Stripe API resource explicitly as a Resource { URL, HTTPMethod, ReturnType }
 /// 3) Make this class generic on the Resource
+@available(iOS 13, *)
 class APIRequest<ResponseType: STPAPIResponseDecodable>: NSObject {
   typealias STPAPIResponseBlock = (ResponseType?, HTTPURLResponse?, Error?) -> Void
 

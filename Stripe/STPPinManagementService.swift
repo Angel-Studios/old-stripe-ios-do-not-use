@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 /// STPAPIClient extensions to manage PIN on Stripe Issuing cards
+@available(iOS 13, *)
 public class STPPinManagementService: NSObject {
   /// The API Client to use to make requests.
   /// Defaults to STPAPIClient.shared
