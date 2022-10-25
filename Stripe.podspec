@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target          = '13.0'
   s.swift_version		               = '5.0'
   s.source_files                   = 'Stripe/*.swift'
-  s.ios.resource_bundle            = { 'Stripe' => 'Stripe/Resources/**/*' }
+  s.ios.resource_bundle            = { 'Stripe' => 'Stripe/Resources/**/*.*' }
+  s.ios.resources                  = ['Stripe/Resources/**/*.png', 'Stripe/Resources/**/*.json', 'Stripe/Resources/**/*.lproj']
   s.subspec 'Stripe3DS2' do |sp|
     sp.source_files  = 'Stripe3DS2/Stripe3DS2/**/*.{h,m}'
     sp.resource_bundles = { 'Stripe3DS2' => ['Stripe3DS2/Stripe3DS2/Resources/**/*.{lproj,png}'] }
