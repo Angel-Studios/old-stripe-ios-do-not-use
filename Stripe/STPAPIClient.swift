@@ -15,6 +15,7 @@ import Stripe3DS2
 #endif
 
 /// A client for making connections to the Stripe API.
+@available(iOS 13, *)
 public class STPAPIClient: NSObject {
   /// The current version of this library.
   @objc public static let STPSDKVersion = "21.3.1"
@@ -221,6 +222,7 @@ public class STPAPIClient: NSObject {
 // MARK: Bank Accounts
 
 /// STPAPIClient extensions to create Stripe tokens from bank accounts.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Converts an STPBankAccount object into a Stripe token using the Stripe API.
   /// - Parameters:
@@ -241,6 +243,7 @@ extension STPAPIClient {
 // MARK: Personally Identifiable Information
 
 /// STPAPIClient extensions to create Stripe tokens from a personal identification number.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Converts a personal identification number into a Stripe token using the Stripe API.
   /// - Parameters:
@@ -284,6 +287,7 @@ extension STPAPIClient {
 // MARK: Connect Accounts
 
 /// STPAPIClient extensions for working with Connect Accounts
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Converts an `STPConnectAccountParams` object into a Stripe token using the Stripe API.
   /// This allows the connected account to accept the Terms of Service, and/or send Legal Entity information.
@@ -306,6 +310,7 @@ extension STPAPIClient {
 // MARK: Upload
 
 /// STPAPIClient extensions to upload files.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   func data(
     forUploadedImage image: UIImage,
@@ -409,6 +414,7 @@ extension STPAPIClient {
 // MARK: Credit Cards
 
 /// STPAPIClient extensions to create Stripe tokens from credit or debit cards.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Converts an STPCardParams object into a Stripe token using the Stripe API.
   /// - Parameters:
@@ -446,6 +452,7 @@ extension STPAPIClient {
 // MARK: Sources
 
 /// STPAPIClient extensions for working with Source objects
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Creates a Source object using the provided details.
   /// Note: in order to create a source on a connected account, you can set your
@@ -563,6 +570,7 @@ extension STPAPIClient {
 // MARK: Payment Intents
 
 /// STPAPIClient extensions for working with PaymentIntent objects.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Retrieves the PaymentIntent object using the given secret. - seealso: https://stripe.com/docs/api#retrieve_payment_intent
   /// - Parameters:
@@ -702,6 +710,7 @@ extension STPAPIClient {
 // MARK: Setup Intents
 
 /// STPAPIClient extensions for working with SetupIntent objects.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Retrieves the SetupIntent object using the given secret. - seealso: https://stripe.com/docs/api/setup_intents/retrieve
   /// - Parameters:
@@ -783,6 +792,7 @@ extension STPAPIClient {
 // MARK: Payment Methods
 
 /// STPAPIClient extensions for working with PaymentMethod objects.
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Creates a PaymentMethod object with the provided params object.
   /// - seealso: https://stripe.com/docs/api/payment_methods/create
@@ -826,6 +836,7 @@ extension STPAPIClient {
 }
 
 // MARK: - Customers
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Retrieve a customer
   /// - seealso: https://stripe.com/docs/api#retrieve_customer
@@ -918,6 +929,7 @@ extension STPAPIClient {
 }
 
 // MARK: - ThreeDS2
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Kicks off 3DS2 authentication.
   func authenticate3DS2(
@@ -971,6 +983,7 @@ extension STPAPIClient {
   }
 }
 
+@available(iOSApplicationExtension 13, *)
 extension STPAPIClient {
   /// Retrieves possible BIN ranges for the 6 digit BIN prefix.
   /// - Parameter completion: The callback to run with the return STPCardBINMetadata, or an error.

@@ -14,6 +14,7 @@ import Foundation
 /// be sure to either create a new instance of `STPCustomerContext` or clear the current
 /// instance's cache. On your backend, be sure to create and return a
 /// new ephemeral key for the Customer object associated with the new user.
+@available(iOS 13, *)
 open class STPCustomerContext: NSObject, STPBackendAPIAdapter {
   /// Initializes a new `STPCustomerContext` with the specified key provider.
   /// Upon initialization, a CustomerContext will fetch a new ephemeral key from

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 13, *)
 class STPAnalyticsClient: NSObject {
   @objc static let sharedClient = STPAnalyticsClient()
 
@@ -102,6 +103,7 @@ class STPAnalyticsClient: NSObject {
 }
 
 // MARK: - Helpers
+@available(iOS 13, *)
 extension STPAnalyticsClient {
   private class func commonPayload() -> [String: Any] {
     var payload: [String: Any] = [:]
@@ -200,6 +202,7 @@ extension STPAnalyticsClient {
 }
 
 // MARK: - Creation
+@available(iOS 13, *)
 extension STPAnalyticsClient {
   @objc(logTokenCreationAttemptWithConfiguration:tokenType:)
   func logTokenCreationAttempt(
@@ -255,6 +258,7 @@ extension STPAnalyticsClient {
 }
 
 // MARK: - Confirmation
+@available(iOS 13, *)
 extension STPAnalyticsClient {
   @objc(logPaymentIntentConfirmationAttemptWithConfiguration:paymentMethodType:)
   func logPaymentIntentConfirmationAttempt(
@@ -292,6 +296,7 @@ extension STPAnalyticsClient {
 }
 
 // MARK: - 3DS2 Flow
+@available(iOS 13, *)
 extension STPAnalyticsClient {
   @objc(log3DS2AuthenticateAttemptWithConfiguration:intentID:)
   func log3DS2AuthenticateAttempt(
@@ -442,6 +447,7 @@ extension STPAnalyticsClient {
 }
 
 // MARK: - Card Metadata
+@available(iOS 13, *)
 extension STPAnalyticsClient {
   func logUserEnteredCompletePANBeforeMetadataLoaded(with configuration: STPPaymentConfiguration) {
     let configurationDictionary = type(of: self).serializeConfiguration(configuration)
@@ -481,6 +487,7 @@ extension STPAnalyticsClient {
 }
 
 // MARK: - Card Scanning
+@available(iOS 13, *)
 extension STPAnalyticsClient {
   func logCardScanSucceeded(withDuration duration: TimeInterval) {
     var payload = type(of: self).commonPayload()

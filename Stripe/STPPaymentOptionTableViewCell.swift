@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension 13, *)
 class STPPaymentOptionTableViewCell: UITableViewCell {
   @objc(configureForNewCardRowWithTheme:) func configureForNewCardRow(with theme: STPTheme) {
     paymentOption = nil

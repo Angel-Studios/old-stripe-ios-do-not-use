@@ -12,6 +12,7 @@ import UIKit
 /// only by Stripe classes, you should not subclass it yourself in your app.
 /// It theming, back/cancel button management, and other shared logic for
 /// Stripe view controllers.
+@available(iOS 13, *)
 public class STPCoreViewController: UIViewController {
   /// A convenience initializer; equivalent to calling `init(theme: STPTheme.defaultTheme)`.
   @objc

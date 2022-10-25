@@ -15,6 +15,8 @@ import Foundation
 /// - a pre-existing PaymentMethod or Source can be associated by passing its id in the `paymentMethodId` or `sourceId` field
 /// - or already set via your backend, either when creating or updating the PaymentIntent
 /// - seealso: https://stripe.com/docs/api#confirm_payment_intent
+@available(iOSApplicationExtension 13, *)
+@available(iOSApplicationExtension 13, *)
 public class STPPaymentIntentParams: NSObject {
 
   /// Initialize this `STPPaymentIntentParams` with a `clientSecret`, which is the only required
@@ -214,6 +216,7 @@ public class STPPaymentIntentParams: NSObject {
 }
 
 // MARK: - STPFormEncodable
+@available(iOSApplicationExtension 13, *)
 extension STPPaymentIntentParams: STPFormEncodable {
 
   @objc internal var setupFutureUsageRawString: String? {
@@ -246,6 +249,7 @@ extension STPPaymentIntentParams: STPFormEncodable {
 }
 
 // MARK: - NSCopying
+@available(iOSApplicationExtension 13, *)
 extension STPPaymentIntentParams: NSCopying {
 
   /// :nodoc:

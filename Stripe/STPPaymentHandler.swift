@@ -105,7 +105,7 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
 
   /// `STPPaymentHandler` should not be directly initialized.
   private override init() {
-    self.apiClient = STPAPIClient.shared
+      self.apiClient = STPAPIClient.shared
     self.threeDSCustomizationSettings = STPThreeDSCustomizationSettings()
     super.init()
   }
@@ -125,7 +125,8 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
   ///   - paymentParams: The params used to confirm the PaymentIntent. Note that this method overrides the value of `paymentParams.useStripeSDK` to `@YES`.
   ///   - authenticationContext: The authentication context used to authenticate the payment.
   ///   - completion: The completion block. If the status returned is `STPPaymentHandlerActionStatusSucceeded`, the PaymentIntent status will always be either STPPaymentIntentStatusSucceeded or STPPaymentIntentStatusRequiresCapture if you are using manual capture. In the latter case, capture the PaymentIntent to complete the payment.
-  @objc(confirmPayment:withAuthenticationContext:completion:)
+    @available(iOSApplicationExtension 13, *)
+    @objc(confirmPayment:withAuthenticationContext:completion:)
   public func confirmPayment(
     _ paymentParams: STPPaymentIntentParams,
     with authenticationContext: STPAuthenticationContext,
@@ -210,7 +211,11 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
     authenticationContext: STPAuthenticationContext,
     completion: @escaping STPPaymentHandlerActionPaymentIntentCompletionBlock
   ) {
-    self.confirmPayment(withParams, with: authenticationContext, completion: completion)
+      if #available(iOSApplicationExtension 13, *) {
+          self.confirmPayment(withParams, with: authenticationContext, completion: completion)
+      } else {
+          // Fallback on earlier versions
+      }
   }
   
   /// Handles any `nextAction` required to authenticate the PaymentIntent.
@@ -1424,10 +1429,14 @@ private extension STPPaymentHandler {
       return
     }
     let transactionStatus = completionEvent.transactionStatus
-    STPAnalyticsClient.sharedClient.log3DS2ChallengeFlowCompleted(
-      with: currentAction.apiClient.configuration,
-      intentID: currentAction.intentStripeID ?? "",
-      uiType: transaction.presentedChallengeUIType)
+      if #available(iOSApplicationExtension 13, *) {
+          STPAnalyticsClient.sharedClient.log3DS2ChallengeFlowCompleted(
+            with: currentAction.apiClient.configuration,
+            intentID: currentAction.intentStripeID ?? "",
+            uiType: transaction.presentedChallengeUIType)
+      } else {
+          // Fallback on earlier versions
+      }
     if transactionStatus == "Y" {
       _markChallengeCompleted(withCompletion: { markedCompleted, error in
         currentAction.complete(

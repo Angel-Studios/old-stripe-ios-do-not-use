@@ -16,6 +16,7 @@ enum STPAUBECSFormViewField: Int {
   case accountNumber
 }
 
+@available(iOSApplicationExtension 13, *)
 class STPAUBECSFormViewModel {
   var name: String?
   var email: String?

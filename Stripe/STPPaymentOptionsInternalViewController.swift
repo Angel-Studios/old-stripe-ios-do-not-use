@@ -17,6 +17,7 @@ import UIKit
   func internalViewControllerDidCancel()
 }
 
+@available(iOS 13, *)
 class STPPaymentOptionsInternalViewController: STPCoreTableViewController, UITableViewDataSource,
   UITableViewDelegate, STPAddCardViewControllerDelegate, STPBankSelectionViewControllerDelegate
 {

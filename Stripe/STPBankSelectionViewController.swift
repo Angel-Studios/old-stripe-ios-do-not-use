@@ -20,6 +20,7 @@ import UIKit
 /// This view controller displays a list of banks of the specified type, allowing the user to select one to pay from.
 /// Once a bank is selected, it will return a PaymentMethodParams object, which you can use to confirm a PaymentIntent
 /// or inspect to obtain details about the selected bank.
+@available(iOS 13, *)
 public class STPBankSelectionViewController: STPCoreTableViewController, UITableViewDataSource,
   UITableViewDelegate
 {
@@ -233,6 +234,7 @@ public class STPBankSelectionViewController: STPCoreTableViewController, UITable
 }
 
 /// An `STPBankSelectionViewControllerDelegate` is notified when a user selects a bank.
+@available(iOS 13, *)
 @objc public protocol STPBankSelectionViewControllerDelegate: NSObjectProtocol {
   /// This is called when the user selects a bank.
   /// You can use the returned PaymentMethodParams to confirm a PaymentIntent, or inspect

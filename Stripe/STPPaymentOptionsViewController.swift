@@ -17,6 +17,7 @@ import UIKit
 /// `UINavigationController`'s stack. You can also have `STPPaymentContext` do this
 /// for you automatically, by calling `presentPaymentOptionsViewController`
 /// or `pushPaymentOptionsViewController` on it.
+@available(iOS 13, *)
 public class STPPaymentOptionsViewController: STPCoreViewController,
   STPPaymentOptionsInternalViewControllerDelegate, STPAddCardViewControllerDelegate
 {
@@ -499,6 +500,7 @@ public class STPPaymentOptionsViewController: STPCoreViewController,
 /// payment option from (or cancels) an `STPPaymentOptionsViewController`. In both
 /// of these instances, you should dismiss the view controller (either by popping
 /// it off the navigation stack, or dismissing it).
+@available(iOS 13, *)
 @objc public protocol STPPaymentOptionsViewControllerDelegate: NSObjectProtocol {
   /// This is called when the view controller encounters an error fetching the user's
   /// payment options from its API adapter. You should dismiss the view controller

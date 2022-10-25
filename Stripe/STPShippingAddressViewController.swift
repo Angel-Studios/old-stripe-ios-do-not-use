@@ -10,6 +10,7 @@ import PassKit
 import UIKit
 
 /// This view controller contains a shipping address collection form. It renders a right bar button item that submits the form, so it must be shown inside a `UINavigationController`. Depending on your configuration's shippingType, the view controller may present a shipping method selection form after the user enters an address.
+@available(iOS 13, *)
 public class STPShippingAddressViewController : STPCoreTableViewController
 {
 
@@ -438,6 +439,7 @@ public class STPShippingAddressViewController : STPCoreTableViewController
 }
 
 /// An `STPShippingAddressViewControllerDelegate` is notified when an `STPShippingAddressViewController` receives an address, completes with an address, or is cancelled.
+@available(iOS 13, *)
 @objc public protocol STPShippingAddressViewControllerDelegate: NSObjectProtocol {
   /// Called when the user cancels entering a shipping address. You should dismiss (or pop) the view controller at this point.
   /// - Parameter addressViewController: the view controller that has been cancelled
@@ -473,6 +475,7 @@ public class STPShippingAddressViewController : STPCoreTableViewController
   )
 }
 
+@available(iOS 13, *)
 extension STPShippingAddressViewController :
 STPAddressViewModelDelegate, UITableViewDelegate, UITableViewDataSource,
 STPShippingMethodsViewControllerDelegate {

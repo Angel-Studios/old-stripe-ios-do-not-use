@@ -9,6 +9,7 @@
 import PassKit
 import UIKit
 
+@available(iOS 13, *)
 class STPShippingMethodsViewController: STPCoreTableViewController, UITableViewDataSource,
   UITableViewDelegate
 {
@@ -176,6 +177,7 @@ class STPShippingMethodsViewController: STPCoreTableViewController, UITableViewD
   }
 }
 
+@available(iOS 13, *)
 @objc protocol STPShippingMethodsViewControllerDelegate: NSObjectProtocol {
   func shippingMethodsViewController(
     _ methodsViewController: STPShippingMethodsViewController,

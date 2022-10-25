@@ -13,6 +13,7 @@ import UIKit
 /// for use only by Stripe classes, you should not subclass it yourself in your app.
 /// It inherits from STPCoreScrollViewController and changes the type of the
 /// created scroll view to UITableView, as well as other shared table view logic.
+@available(iOS 13, *)
 public class STPCoreTableViewController: STPCoreScrollViewController {
   /// This points to the same object as `STPCoreScrollViewController`'s `scrollView`
   /// property but with the type cast to `UITableView`

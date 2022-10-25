@@ -13,6 +13,7 @@ import Foundation
 /// If the selected payment method does not require any additional steps from the customer, the SetupIntent's status will transition to `STPSetupIntentStatusSucceeded`.  Otherwise, it will transition to `STPSetupIntentStatusRequiresAction`, and suggest additional actions via `nextAction`.
 /// Instead of passing this to `STPAPIClient.confirmSetupIntent(...)` directly, we recommend using `STPPaymentHandler` to handle any additional steps for you.
 /// - seealso: https://stripe.com/docs/api/setup_intents/confirm
+@available(iOSApplicationExtension 13, *)
 public class STPSetupIntentConfirmParams: NSObject, NSCopying, STPFormEncodable {
   @objc public var additionalAPIParameters: [AnyHashable: Any] = [:]
 

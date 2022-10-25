@@ -11,6 +11,7 @@ import UIKit
 
 /// This is the base class for all Stripe scroll view controllers. It is intended
 /// for use only by Stripe classes, you should not subclass it yourself in your app.
+@available(iOS 13, *)
 public class STPCoreScrollViewController: STPCoreViewController {
   /// This returns the scroll view being managed by the view controller
   @objc public lazy var scrollView: UIScrollView = {
