@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Stripe.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Stripe3DS2/Stripe3DS2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/UI Examples.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/Basic Integration.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/Non-Card Payment Examples.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/../LocalizationTester/LocalizationTester.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:IntegrationTester/IntegrationTester.xcodeproj">
+   </FileRef>
+</Workspace>
