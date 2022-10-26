@@ -14,6 +14,7 @@ import Foundation
   case cardField
 }
 
+@available(iOS 13, *)
 @available(iOSApplicationExtension 13, *)
 class STPPostalCodeValidator: NSObject {
   class func postalCodeIsRequired(forCountryCode countryCode: String?) -> Bool {

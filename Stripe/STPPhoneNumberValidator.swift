@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 13, *)
 class STPPhoneNumberValidator: NSObject {
   class func stringIsValidPartialPhoneNumber(_ string: String) -> Bool {
     return self.stringIsValidPartialPhoneNumber(string, forCountryCode: nil)
