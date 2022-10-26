@@ -9,6 +9,7 @@
 import UIKit
 
 /// STPMultiFormFieldDelegate provides methods for a delegate to respond to editing and text changes.
+@available(iOS 13, *)
 @objc protocol STPMultiFormFieldDelegate: NSObjectProtocol {
   /// Called when the text field becomes the first responder.
   func formTextFieldDidStartEditing(
@@ -39,6 +40,7 @@ import UIKit
 }
 
 /// STPMultiFormTextField is a lightweight UIView that wraps a collection of STPFormTextFields and can automatically move to the next form field when one is completed.
+@available(iOS 13, *)
 public class STPMultiFormTextField: UIView, STPFormTextFieldContainer, UITextFieldDelegate,
   STPFormTextFieldDelegate
 {

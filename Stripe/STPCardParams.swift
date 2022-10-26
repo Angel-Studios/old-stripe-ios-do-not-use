@@ -12,6 +12,7 @@ import Foundation
 /// information that your user enters and then create Stripe tokens with them using
 /// an STPAPIClient.
 /// - seealso: https://stripe.com/docs/api#cards
+@available(iOS 13, *)
 public class STPCardParams: NSObject, STPFormEncodable, NSCopying {
   public var additionalAPIParameters: [AnyHashable: Any] = [:]
 

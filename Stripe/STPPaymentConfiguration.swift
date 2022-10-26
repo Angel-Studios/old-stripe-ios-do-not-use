@@ -14,6 +14,7 @@ import Foundation
 /// when making a charge. The configuration generally has settings that
 /// will not change from payment to payment and thus is reusable, while the context
 /// is specific to a single particular payment instance.
+@available(iOS 13, *)
 public class STPPaymentConfiguration: NSObject, NSCopying {
   /// This is a convenience singleton configuration that uses the default values for
   /// every property

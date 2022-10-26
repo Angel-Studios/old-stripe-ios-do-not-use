@@ -9,6 +9,7 @@
 import ObjectiveC
 import PassKit
 
+@available(iOS 13, *)
 typealias STPApplePayPaymentMethodHandlerBlock = (STPPaymentMethod, @escaping STPPaymentStatusBlock)
   -> Void
 typealias STPPaymentCompletionBlock = (STPPaymentStatus, Error?) -> Void
@@ -19,6 +20,7 @@ typealias STPShippingMethodSelectionBlock = (
 typealias STPShippingAddressValidationBlock = (
   STPShippingStatus, [PKShippingMethod], [PKPaymentSummaryItem]
 ) -> Void
+@available(iOS 13, *)
 typealias STPShippingAddressSelectionBlock = (
   STPAddress, @escaping STPShippingAddressValidationBlock
 ) -> Void

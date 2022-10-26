@@ -29,6 +29,7 @@ public enum STPSourceCard3DSecureStatus: Int {
 
 /// This class provides typed access to the contents of an STPSource `details`
 /// dictionary for card sources.
+@available(iOS 13, *)
 public class STPSourceCardDetails: NSObject, STPAPIResponseDecodable {
   /// The last 4 digits of the card.
   @objc public private(set) var last4: String?

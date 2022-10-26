@@ -70,10 +70,12 @@ import Stripe3DS2
 }
 
 /// Completion block typedef for use in `STPPaymentHandler` methods for Payment Intents.
+@available(iOS 13, *)
 public typealias STPPaymentHandlerActionPaymentIntentCompletionBlock = (
   STPPaymentHandlerActionStatus, STPPaymentIntent?, NSError?
 ) -> Void
 /// Completion block typedef for use in `STPPaymentHandler` methods for Setup Intents.
+@available(iOS 13, *)
 public typealias STPPaymentHandlerActionSetupIntentCompletionBlock = (
   STPPaymentHandlerActionStatus, STPSetupIntent?, NSError?
 ) -> Void

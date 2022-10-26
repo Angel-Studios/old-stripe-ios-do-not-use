@@ -10,6 +10,7 @@ import Foundation
 
 /// An object representing parameters used to create a Source object.
 /// - seealso: https://stripe.com/docs/api#create_source
+@available(iOS 13, *)
 public class STPSourceParams: NSObject, STPFormEncodable, NSCopying {
   @objc public var additionalAPIParameters: [AnyHashable: Any] = [:]
   var redirectMerchantName: String?
@@ -72,6 +73,7 @@ public class STPSourceParams: NSObject, STPFormEncodable, NSCopying {
 }
 
 // MARK: - Constructors
+@available(iOS 13, *)
 extension STPSourceParams {
   /// Creates params for a Bancontact source.
   /// - seealso: https://stripe.com/docs/bancontact#create-source

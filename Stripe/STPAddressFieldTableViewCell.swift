@@ -20,6 +20,7 @@ enum STPAddressFieldType: Int {
   case phone
 }
 
+@available(iOS 13, *)
 protocol STPAddressFieldTableViewCellDelegate: class {
   func addressFieldTableViewCellDidUpdateText(_ cell: STPAddressFieldTableViewCell)
 
@@ -29,6 +30,7 @@ protocol STPAddressFieldTableViewCellDelegate: class {
   var availableCountries: Set<String>? { get set }
 }
 
+@available(iOS 13, *)
 class STPAddressFieldTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDelegate,
   UIPickerViewDataSource
 {

@@ -13,6 +13,7 @@ let kLabeledFormFieldHeight: CGFloat = 44.0
 let kLabeledFormVeriticalMargin: CGFloat = 4.0
 let kLabeledFormHorizontalMargin: CGFloat = 12.0
 
+@available(iOS 13, *)
 class STPLabeledFormTextFieldView: STPViewWithSeparator {
   private var formLabel: UILabel?
 

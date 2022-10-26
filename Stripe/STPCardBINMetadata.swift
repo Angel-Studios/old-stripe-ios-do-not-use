@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 13, *)
 class STPCardBINMetadata: NSObject, STPAPIResponseDecodable {
   let ranges: [STPBINRange]
   let allResponseFields: [AnyHashable: Any]

@@ -10,6 +10,7 @@ import Foundation
 
 /// A SetupIntent guides you through the process of setting up a customer's payment credentials for future payments.
 /// - seealso: https://stripe.com/docs/api/setup_intents
+@available(iOS 13, *)
 public class STPSetupIntent: NSObject, STPAPIResponseDecodable {
   /// The Stripe ID of the SetupIntent.
   @objc public private(set) var stripeID: String

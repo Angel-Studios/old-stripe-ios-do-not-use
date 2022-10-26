@@ -55,11 +55,13 @@ public typealias STPJSONResponseCompletionBlock = ([AnyHashable: Any]?, Error?) 
 /// - Parameters:
 ///   - token: The Stripe token from the response. Will be nil if an error occurs. - seealso: STPToken
 ///   - error: The error returned from the response, or nil if none occurs. - seealso: StripeError.h for possible values.
+@available(iOS 13, *)
 public typealias STPTokenCompletionBlock = (STPToken?, Error?) -> Void
 /// A callback to be run with a source response from the Stripe API.
 /// - Parameters:
 ///   - source: The Stripe source from the response. Will be nil if an error occurs. - seealso: STPSource
 ///   - error: The error returned from the response, or nil if none occurs. - seealso: StripeError.h for possible values.
+@available(iOS 13, *)
 public typealias STPSourceCompletionBlock = (STPSource?, Error?) -> Void
 /// A callback to be run with a source or card response from the Stripe API.
 /// - Parameters:
@@ -70,21 +72,25 @@ public typealias STPSourceProtocolCompletionBlock = (STPSourceProtocol?, Error?)
 /// - Parameters:
 ///   - paymentIntent: The Stripe PaymentIntent from the response. Will be nil if an error occurs. - seealso: STPPaymentIntent
 ///   - error: The error returned from the response, or nil if none occurs. - seealso: StripeError.h for possible values.
+@available(iOS 13, *)
 public typealias STPPaymentIntentCompletionBlock = (STPPaymentIntent?, Error?) -> Void
 /// A callback to be run with a PaymentIntent response from the Stripe API.
 /// - Parameters:
 ///   - setupIntent: The Stripe SetupIntent from the response. Will be nil if an error occurs. - seealso: STPSetupIntent
 ///   - error: The error returned from the response, or nil if none occurs. - seealso: StripeError.h for possible values.
+@available(iOS 13, *)
 public typealias STPSetupIntentCompletionBlock = (STPSetupIntent?, Error?) -> Void
 /// A callback to be run with a PaymentMethod response from the Stripe API.
 /// - Parameters:
 ///   - paymentMethod: The Stripe PaymentMethod from the response. Will be nil if an error occurs. - seealso: STPPaymentMethod
 ///   - error: The error returned from the response, or nil if none occurs. - seealso: StripeError.h for possible values.
+@available(iOS 13, *)
 public typealias STPPaymentMethodCompletionBlock = (STPPaymentMethod?, Error?) -> Void
 /// A callback to be run with an array of PaymentMethods response from the Stripe API.
 /// - Parameters:
 ///   - paymentMethods: An array of PaymentMethod from the response. Will be nil if an error occurs. - seealso: STPPaymentMethod
 ///   - error: The error returned from the response, or nil if none occurs. - seealso: StripeError.h for possible values.
+@available(iOS 13, *)
 public typealias STPPaymentMethodsCompletionBlock = ([STPPaymentMethod]?, Error?) -> Void
 /// A callback to be run with a validation result and shipping methods for a
 /// shipping address.
@@ -105,6 +111,7 @@ public typealias STPFileCompletionBlock = (STPFile?, Error?) -> Void
 /// - Parameters:
 ///   - customer:     The Stripe customer from the response, or nil if an error occurred. - seealso: STPCustomer
 ///   - error:        The error returned from the response, or nil if none occurs.
+@available(iOS 13, *)
 public typealias STPCustomerCompletionBlock = (STPCustomer?, Error?) -> Void
 /// An enum representing the success and error states of PIN management
 @objc public enum STPPinStatus: Int {

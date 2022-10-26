@@ -59,6 +59,7 @@ import Foundation
 /// A PaymentIntent tracks the process of collecting a payment from your customer.
 /// - seealso: https://stripe.com/docs/api#payment_intents
 /// - seealso: https://stripe.com/docs/payments/dynamic-authentication
+@available(iOS 13, *)
 public class STPPaymentIntent: NSObject {
 
   /// The Stripe ID of the PaymentIntent.
@@ -207,6 +208,7 @@ public class STPPaymentIntent: NSObject {
 }
 
 // MARK: - STPAPIResponseDecodable
+@available(iOS 13, *)
 extension STPPaymentIntent: STPAPIResponseDecodable {
 
   @objc
@@ -261,6 +263,7 @@ extension STPPaymentIntent: STPAPIResponseDecodable {
 }
 
 // MARK: - Deprecated
+@available(iOS 13, *)
 extension STPPaymentIntent {
 
   /// If `status == STPPaymentIntentStatusRequiresAction`, this
@@ -273,6 +276,7 @@ extension STPPaymentIntent {
 }
 
 // MARK: - Internal
+@available(iOS 13, *)
 extension STPPaymentIntent {
 
   /// Helper function for extracting PaymentIntent id from the Client Secret.

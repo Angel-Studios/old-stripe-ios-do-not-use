@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 /// Representation of a customer's payment instrument created with the Stripe API. - seealso: https://stripe.com/docs/api#sources
+@available(iOS 13, *)
 public class STPSource: NSObject, STPAPIResponseDecodable, STPSourceProtocol, STPPaymentOption {
 
   /// You cannot directly instantiate an `STPSource`. You should only use one that

@@ -29,6 +29,7 @@ public enum STPPaymentMethodCardWalletType: Int {
 
 /// A Card Wallet.
 /// - seealso: https://stripe.com/docs/api/payment_methods/object#payment_method_object-card-wallet
+@available(iOS 13, *)
 public class STPPaymentMethodCardWallet: NSObject, STPAPIResponseDecodable {
   /// The type of the Card Wallet. A matching property is populated if the type is `STPPaymentMethodCardWalletTypeMasterpass` or `STPPaymentMethodCardWalletTypeVisaCheckout` containing additional information specific to the Card Wallet type.
   @objc public private(set) var type: STPPaymentMethodCardWalletType = .unknown
@@ -104,5 +105,6 @@ public class STPPaymentMethodCardWallet: NSObject, STPAPIResponseDecodable {
 //  Copyright © 2019 Stripe, Inc. All rights reserved.
 //
 
+@available(iOS 13, *)
 extension STPPaymentMethodCardWallet {
 }

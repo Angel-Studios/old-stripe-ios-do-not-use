@@ -9,6 +9,7 @@
 import Foundation
 
 /// The user's card details.
+@available(iOS 13, *)
 public class STPPaymentMethodCardParams: NSObject, STPFormEncodable {
   @objc public var additionalAPIParameters: [AnyHashable: Any] = [:]
 

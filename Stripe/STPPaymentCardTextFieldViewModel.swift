@@ -16,6 +16,7 @@ import UIKit
   case postalCode
 }
 
+@available(iOS 13, *)
 class STPPaymentCardTextFieldViewModel: NSObject {
   private var _cardNumber: String?
   @objc dynamic var cardNumber: String? {

@@ -10,6 +10,7 @@ import Foundation
 
 /// A Masterpass Card Wallet
 /// - seealso: https://stripe.com/docs/masterpass
+@available(iOS 13, *)
 public class STPPaymentMethodCardWalletMasterpass: NSObject, STPAPIResponseDecodable {
   /// Owner’s verified email. Values are verified or provided by the payment method directly (and if supported) at the time of authorization or settlement.
   @objc public private(set) var email: String?

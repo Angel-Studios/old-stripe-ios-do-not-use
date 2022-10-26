@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13, *)
 class STPPaymentCardTextFieldCell: UITableViewCell {
   private(set) weak var paymentField: STPPaymentCardTextField?
 

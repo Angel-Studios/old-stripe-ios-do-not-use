@@ -9,6 +9,7 @@
 import Foundation
 
 /// Deserializes the response returned from https://stripe.com/docs/api/payment_methods/list
+@available(iOS 13, *)
 class STPPaymentMethodListDeserializer: NSObject, STPAPIResponseDecodable {
   private(set) var paymentMethods: [STPPaymentMethod]?
   private(set) var allResponseFields: [AnyHashable: Any] = [:]

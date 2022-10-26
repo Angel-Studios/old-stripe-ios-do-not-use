@@ -7,8 +7,9 @@
 //
 
 import Foundation
-
+@available(iOS 13, *)
 typealias STPRetrieveBINRangesCompletionBlock = ([STPBINRange]?, Error?) -> Void
+@available(iOS 13, *)
 class STPBINRange: NSObject, STPAPIResponseDecodable {
     
     private(set) var allResponseFields: [AnyHashable: Any] = [:]

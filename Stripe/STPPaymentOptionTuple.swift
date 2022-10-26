@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 13, *)
 class STPPaymentOptionTuple: NSObject {
   @objc
   public convenience init(

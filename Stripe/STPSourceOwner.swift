@@ -9,6 +9,7 @@
 import Foundation
 
 /// Information about a source's owner.
+@available(iOS 13, *)
 public class STPSourceOwner: NSObject, STPAPIResponseDecodable {
   override required init() {
     super.init()

@@ -10,6 +10,7 @@ import Foundation
 
 /// Contains details about a user's credit card.
 /// - seealso: https://stripe.com/docs/api/payment_methods/object#payment_method_object-card
+@available(iOS 13, *)
 public class STPPaymentMethodCard: NSObject, STPAPIResponseDecodable {
   /// You cannot directly instantiate an `STPPaymentMethodCard`. You should only use one that is part of an existing `STPPaymentMethod` object.
   required internal override init() {

@@ -12,6 +12,7 @@ import Foundation
 /// from your user. You can then set the `prefilledInformation` property on
 /// `STPPaymentContext`, `STPAddCardViewController`, etc and it will pre-fill
 /// this information whenever possible.
+@available(iOS 13, *)
 public class STPUserInformation: NSObject, NSCopying {
   /// The user's billing address. When set, the add card form will be filled with
   /// this address. The user will also have the option to fill their shipping address

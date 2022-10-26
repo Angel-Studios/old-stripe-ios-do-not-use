@@ -16,6 +16,7 @@ enum STPFormTextFieldAutoFormattingBehavior: Int {
   case bsbNumber
 }
 
+@available(iOS 13, *)
 @objc protocol STPFormTextFieldDelegate: UITextFieldDelegate {
   // Note, post-Swift conversion:
   // In lieu of a real delegate proxy, this should always be implemented and call:
@@ -36,6 +37,7 @@ enum STPFormTextFieldAutoFormattingBehavior: Int {
   @objc optional func formTextFieldTextDidChange(_ textField: STPFormTextField)
 }
 
+@available(iOS 13, *)
 @objc class STPFormTextField: STPValidatedTextField {
 
   private var _selectionEnabled = false
@@ -339,6 +341,7 @@ enum STPFormTextFieldAutoFormattingBehavior: Int {
   }
 }
 
+@available(iOS 13, *)
 class STPTextFieldDelegateProxy: NSObject, UITextFieldDelegate {
   internal var inShouldChangeCharactersInRange = false
   var autoformattingBehavior: STPFormTextFieldAutoFormattingBehavior = .none

@@ -18,6 +18,7 @@ import UIKit
 /// If you would prefer retrieving and updating your Stripe customer object via
 /// your own backend instead of using `STPCustomerContext`, you should make your
 /// application's API client conform to this interface.
+@available(iOS 13, *)
 @objc public protocol STPBackendAPIAdapter: NSObjectProtocol {
   /// Retrieve the customer to be displayed inside a payment context.
   /// If you are not using STPCustomerContext:

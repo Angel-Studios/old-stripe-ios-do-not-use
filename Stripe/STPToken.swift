@@ -24,6 +24,7 @@ public enum STPTokenType: Int {
 }
 
 /// A token returned from submitting payment details to the Stripe API. You should not have to instantiate one of these directly.
+@available(iOS 13, *)
 public class STPToken: NSObject, STPAPIResponseDecodable, STPSourceProtocol {
   /// You cannot directly instantiate an `STPToken`. You should only use one that has been returned from an `STPAPIClient` callback.
   override init() {

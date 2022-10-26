@@ -71,6 +71,7 @@ public typealias STPRedirectContextPaymentIntentCompletionBlock = (String, Error
 /// @note You must retain this instance for the duration of the redirect flow.
 /// This class dismisses any presented view controller upon deallocation.
 /// See https://stripe.com/docs/sources/best-practices
+@available(iOS 13, *)
 @available(iOSApplicationExtension, unavailable)
 @available(macCatalystApplicationExtension, unavailable)
 public class STPRedirectContext: NSObject, SFSafariViewControllerDelegate, STPURLCallbackListener,

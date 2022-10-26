@@ -10,6 +10,7 @@ import Foundation
 
 /// Billing information associated with a `STPPaymentMethod` that may be used or required by particular types of payment methods.
 /// - seealso: https://stripe.com/docs/api/payment_methods/object#payment_method_object-billing_details
+@available(iOS 13, *)
 public class STPPaymentMethodBillingDetails: NSObject, STPAPIResponseDecodable, STPFormEncodable {
   @objc public var additionalAPIParameters: [AnyHashable: Any] = [:]
 

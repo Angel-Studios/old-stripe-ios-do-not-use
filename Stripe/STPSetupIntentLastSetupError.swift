@@ -37,6 +37,7 @@ public enum STPSetupIntentLastSetupErrorType: UInt {
 
 /// A value for `code` indicating the provided payment method failed authentication./// The error encountered in the previous SetupIntent confirmation.
 /// - seealso: https://stripe.com/docs/api/setup_intents/object#setup_intent_object-last_setup_error
+@available(iOS 13, *)
 public class STPSetupIntentLastSetupError: NSObject, STPAPIResponseDecodable {
   /// For some errors that could be handled programmatically, a short string indicating the error code reported.
   /// - seealso: https://stripe.com/docs/error-codes
@@ -125,7 +126,7 @@ public class STPSetupIntentLastSetupError: NSObject, STPAPIResponseDecodable {
 }
 
 // MARK: - `code` string values
-
+@available(iOS 13, *)
 @objc extension STPSetupIntentLastSetupError {
   /// A possible value for the `error` property.  The provided payment method has failed authentication. Provide a new payment method to attempt to fulfill this SetupIntent again.
   public static let CodeAuthenticationFailure = "setup_intent_authentication_failure"

@@ -30,6 +30,7 @@ public enum STPBillingAddressFields: UInt {
 }
 
 /// STPAddress Contains an address as represented by the Stripe API.
+@available(iOS 13, *)
 public class STPAddress: NSObject {
   /// The user's full name (e.g. "Jane Doe")
   @objc public var name: String?
@@ -403,6 +404,7 @@ public class STPAddress: NSObject {
   }
 }
 
+@available(iOS 13, *)
 extension STPAddress: STPAPIResponseDecodable {
   @objc
   public class func decodedObject(fromAPIResponse response: [AnyHashable: Any]?) -> Self? {
@@ -423,6 +425,7 @@ extension STPAddress: STPAPIResponseDecodable {
   }
 }
 
+@available(iOS 13, *)
 extension STPAddress: STPFormEncodable {
 
   @objc
@@ -446,6 +449,7 @@ extension STPAddress: STPFormEncodable {
 
 }
 
+@available(iOS 13, *)
 extension STPAddress: NSCopying {
   /// :nodoc:
   @objc

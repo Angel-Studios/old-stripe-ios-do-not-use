@@ -11,6 +11,7 @@ import UIKit
 
 /// PaymentMethod objects represent your customer's payment instruments. They can be used with PaymentIntents to collect payments.
 /// - seealso: https://stripe.com/docs/api/payment_methods
+@available(iOS 13, *)
 public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOption {
   /// Unique identifier for the object.
   @objc private(set) public var stripeId: String

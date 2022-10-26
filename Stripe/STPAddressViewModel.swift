@@ -10,6 +10,7 @@ import Contacts
 import CoreLocation
 import UIKit
 
+@available(iOS 13, *)
 protocol STPAddressViewModelDelegate: class {
   func addressViewModelDidChange(_ addressViewModel: STPAddressViewModel)
   func addressViewModel(_ addressViewModel: STPAddressViewModel, addedCellAt index: Int)
@@ -18,6 +19,7 @@ protocol STPAddressViewModelDelegate: class {
   func addressViewModelDidUpdate(_ addressViewModel: STPAddressViewModel)
 }
 
+@available(iOS 13, *)
 class STPAddressViewModel: STPAddressFieldTableViewCellDelegate {
   private(set) var addressCells: [STPAddressFieldTableViewCell] = []
   weak var delegate: STPAddressViewModelDelegate?

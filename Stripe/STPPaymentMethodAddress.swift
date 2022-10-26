@@ -10,6 +10,7 @@ import Contacts
 import Foundation
 
 /// The billing address, a property on `STPPaymentMethodBillingDetails`
+@available(iOS 13, *)
 public class STPPaymentMethodAddress: NSObject, STPAPIResponseDecodable, STPFormEncodable {
   @objc public var additionalAPIParameters: [AnyHashable: Any] = [:]
 

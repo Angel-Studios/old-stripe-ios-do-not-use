@@ -13,6 +13,7 @@ import UIKit
 /// multiple UITextFields under the hood to collect this information. It's
 /// designed to fit on a single line, and from a design perspective can be used
 /// anywhere a UITextField would be appropriate.
+@available(iOS 13, *)
 @IBDesignable
 public class STPPaymentCardTextField: UIControl, UIKeyInput, STPFormTextFieldDelegate {
   /// :nodoc:
@@ -1987,6 +1988,7 @@ public class STPPaymentCardTextField: UIControl, UIKeyInput, STPFormTextFieldDel
 /// This protocol allows a delegate to be notified when a payment text field's
 /// contents change, which can in turn be used to take further actions depending
 /// on the validity of its contents.
+@available(iOS 13, *)
 @objc public protocol STPPaymentCardTextFieldDelegate: NSObjectProtocol {
   /// Called when either the card number, expiration, or CVC changes. At this point,
   /// one can call `isValid` on the text field to determine, for example,

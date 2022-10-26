@@ -64,6 +64,7 @@ import Foundation
 
 /// A value for `code` indicating the provided payment method failed authentication./// The payment error encountered in the previous PaymentIntent confirmation.
 /// - seealso: https://stripe.com/docs/api/payment_intents/object#payment_intent_object-last_payment_error
+@available(iOS 13, *)
 public class STPPaymentIntentLastPaymentError: NSObject {
 
   /// A value for `code` indicating the provided payment method failed authentication.
@@ -141,6 +142,7 @@ public class STPPaymentIntentLastPaymentError: NSObject {
 }
 
 // MARK: - STPAPIResponseDecodable
+@available(iOS 13, *)
 extension STPPaymentIntentLastPaymentError: STPAPIResponseDecodable {
 
   @objc

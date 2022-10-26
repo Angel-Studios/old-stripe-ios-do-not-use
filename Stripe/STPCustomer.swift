@@ -11,6 +11,7 @@ import Foundation
 /// An `STPCustomer` represents a deserialized Customer object from the Stripe API.
 /// You shouldn't need to instantiate an `STPCustomer` – you should instead use
 /// `STPCustomerContext` to manage retrieving and updating a customer.
+@available(iOS 13, *)
 public class STPCustomer: NSObject {
 
   /// The Stripe ID of the customer, e.g. `cus_1234`
@@ -103,6 +104,7 @@ public class STPCustomer: NSObject {
   }
 }
 
+@available(iOS 13, *)
 extension STPCustomer: STPAPIResponseDecodable {
   @objc
   public class func decodedObject(fromAPIResponse response: [AnyHashable: Any]?) -> Self? {
@@ -187,6 +189,7 @@ extension STPCustomer: STPAPIResponseDecodable {
 }
 
 /// Use `STPCustomerDeserializer` to convert a response from the Stripe API into an `STPCustomer` object. `STPCustomerDeserializer` expects the JSON response to be in the exact same format as the Stripe API.
+@available(iOS 13, *)
 public class STPCustomerDeserializer: NSObject {
 
   /// If a customer was successfully parsed from the response, it will be set here. Otherwise, this value wil be nil (and the `error` property will explain what went wrong).
