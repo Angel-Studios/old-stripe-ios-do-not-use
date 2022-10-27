@@ -17,7 +17,6 @@ import Foundation
 /// - seealso: https://stripe.com/docs/api#confirm_payment_intent
 @available(iOS 13, *)
 @available(iOSApplicationExtension 13, *)
-@available(iOSApplicationExtension 13, *)
 public class STPPaymentIntentParams: NSObject {
 
   /// Initialize this `STPPaymentIntentParams` with a `clientSecret`, which is the only required

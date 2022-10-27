@@ -214,11 +214,7 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
     authenticationContext: STPAuthenticationContext,
     completion: @escaping STPPaymentHandlerActionPaymentIntentCompletionBlock
   ) {
-      if #available(iOSApplicationExtension 13, *) {
-          self.confirmPayment(withParams, with: authenticationContext, completion: completion)
-      } else {
-          // Fallback on earlier versions
-      }
+      self.confirmPayment(withParams, with: authenticationContext, completion: completion)
   }
   
   /// Handles any `nextAction` required to authenticate the PaymentIntent.
@@ -1433,14 +1429,12 @@ private extension STPPaymentHandler {
       return
     }
     let transactionStatus = completionEvent.transactionStatus
-      if #available(iOSApplicationExtension 13, *) {
-          STPAnalyticsClient.sharedClient.log3DS2ChallengeFlowCompleted(
-            with: currentAction.apiClient.configuration,
-            intentID: currentAction.intentStripeID ?? "",
-            uiType: transaction.presentedChallengeUIType)
-      } else {
-          // Fallback on earlier versions
-      }
+      
+    STPAnalyticsClient.sharedClient.log3DS2ChallengeFlowCompleted(
+      with: currentAction.apiClient.configuration,
+      intentID: currentAction.intentStripeID ?? "",
+      uiType: transaction.presentedChallengeUIType)
+      
     if transactionStatus == "Y" {
       _markChallengeCompleted(withCompletion: { markedCompleted, error in
         currentAction.complete(
